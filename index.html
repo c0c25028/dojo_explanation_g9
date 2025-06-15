@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLLMN: 外部検索キーワードネットワーク可視化によるLLM出力のリアルタイム説明手法</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h2>XLLMN Research</h2>
+            </div>
+            <ul class="nav__menu">
+                <li><a href="#hero">概要</a></li>
+                <li><a href="#background">背景</a></li>
+                <li><a href="#method">技術詳細</a></li>
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#system">システム構成</a></li>
+                <li><a href="#future">今後の展望</a></li>
+                <li><a href="#team">研究チーム</a></li>
+                <li><a href="#downloads">資料ダウンロード</a></li>
+            </ul>
+            <button class="nav__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">XLLMN</h1>
+                <h2 class="hero__subtitle">外部検索キーワードネットワーク可視化によるLLM出力のリアルタイム説明手法</h2>
+                <p class="hero__description">LLMの説明可能性を高める革新的アプローチ</p>
+                <div class="hero__overview">
+                    <p>LLMの出力をキーワードに分割し、外部検索結果とのネットワークを可視化することで、出力の根拠を明確にする新しい手法です。</p>
+                </div>
+                <div class="hero__cta">
+                    <a href="#method" class="btn btn--primary btn--lg">技術詳細を見る</a>
+                    <a href="#downloads" class="btn btn--outline btn--lg">資料ダウンロード</a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749947653/gpt4o_images/pevg8veq5r5wmug9hcn2.png" alt="XLLMN方式を表すAIネットワーク図" class="hero__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Section -->
+    <section id="background" class="background">
+        <div class="container">
+            <div class="section__header">
+                <h2>研究背景</h2>
+                <p>現在のLLMが抱える課題と解決の必要性</p>
+            </div>
+            <div class="background__content">
+                <div class="background__problem card">
+                    <div class="card__body">
+                        <h3>現在の問題</h3>
+                        <p>現在の大規模言語モデル（LLM）は高い性能を持つ一方で、出力の根拠が不明なブラックボックス性、Hallucinationの問題、説明責任の欠如といった課題があります。</p>
+                    </div>
+                </div>
+                <div class="background__context card">
+                    <div class="card__body">
+                        <h3>社会的影響</h3>
+                        <p>人命や財産に関わる意思決定にAIを活用する際、出力の根拠を示すことが困難なため、重要な場面での活用が制限されています。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="method" class="method">
+        <div class="container">
+            <div class="section__header">
+                <h2>技術詳細</h2>
+                <p>XLLMN方式の処理フロー</p>
+            </div>
+            <div class="method__visual">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749947794/pplx_code_interpreter/f70cccba_r2pj32.jpg" alt="XLLMNシステムのプロセスフロー" class="method__flowchart">
+            </div>
+            <div class="method__steps">
+                <div class="step">
+                    <div class="step__number">1</div>
+                    <div class="step__content">
+                        <h4>プロンプト入力</h4>
+                        <p>ユーザーからのプロンプト入力</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">2</div>
+                    <div class="step__content">
+                        <h4>回答生成</h4>
+                        <p>LLMによる回答生成</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">3</div>
+                    <div class="step__content">
+                        <h4>キーワード分割</h4>
+                        <p>出力文章のキーワード分割</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">4</div>
+                    <div class="step__content">
+                        <h4>外部検索</h4>
+                        <p>Google Custom Search APIを用いた外部検索</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">5</div>
+                    <div class="step__content">
+                        <h4>コンテンツ取得</h4>
+                        <p>検索結果のコンテンツスクレイピング</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">6</div>
+                    <div class="step__content">
+                        <h4>ネットワーク構築</h4>
+                        <p>ユーザー入力キーワードとLLM出力キーワードのネットワーク構築</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">7</div>
+                    <div class="step__content">
+                        <h4>リアルタイム可視化</h4>
+                        <p>リアルタイムでの説明可視化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section__header">
+                <h2>特徴・メリット</h2>
+                <p>XLLMN手法の主要な特徴</p>
+            </div>
+            <div class="features__grid">
+                <div class="feature-card card">
+                    <div class="card__body">
+                        <div class="feature-card__icon">⚡</div>
+                        <h3>リアルタイム説明</h3>
+                        <p>LLMの出力と同時に根拠を可視化</p>
+                    </div>
+                </div>
+                <div class="feature-card card">
+                    <div class="card__body">
+                        <div class="feature-card__icon">🔗</div>
+                        <h3>ネットワーク可視化</h3>
+                        <p>キーワード間の関係を視覚的に表示</p>
+                    </div>
+                </div>
+                <div class="feature-card card">
+                    <div class="card__body">
+                        <div class="feature-card__icon">🔍</div>
+                        <h3>外部情報連携</h3>
+                        <p>検索エンジンによる事実確認</p>
+                    </div>
+                </div>
+                <div class="feature-card card">
+                    <div class="card__body">
+                        <div class="feature-card__icon">💡</div>
+                        <h3>透明性向上</h3>
+                        <p>AIの思考過程を明確化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Section -->
+    <section id="system" class="system">
+        <div class="container">
+            <div class="section__header">
+                <h2>システム構成</h2>
+                <p>使用技術とその役割</p>
+            </div>
+            <div class="system__technologies">
+                <div class="tech-item">
+                    <h4>Gemini API</h4>
+                    <p>Google の大規模言語モデル</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Google Custom Search API</h4>
+                    <p>外部検索機能</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Web スクレイピング</h4>
+                    <p>検索結果の内容取得</p>
+                </div>
+                <div class="tech-item">
+                    <h4>ネットワーク可視化</h4>
+                    <p>キーワード関係の図示</p>
+                </div>
+            </div>
+            <div class="system__applications">
+                <h3>応用分野</h3>
+                <ul class="applications-list">
+                    <li>フェイクニュース検知</li>
+                    <li>審議判断支援</li>
+                    <li>医療診断補助</li>
+                    <li>教育支援システム</li>
+                    <li>法的文書分析</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="future">
+        <div class="container">
+            <div class="section__header">
+                <h2>今後の展望</h2>
+                <p>研究の発展と応用可能性</p>
+            </div>
+            <div class="future__plans">
+                <div class="plan-item">
+                    <h4>Fake Newsの検知システムへの適用</h4>
+                </div>
+                <div class="plan-item">
+                    <h4>審議判断支援システムの開発</h4>
+                </div>
+                <div class="plan-item">
+                    <h4>LLM自体の性質（グロッキング）の科学的検証</h4>
+                </div>
+                <div class="plan-item">
+                    <h4>LLMの有効活用プラットフォーム形成</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section__header">
+                <h2>研究チーム</h2>
+                <p>東京工科大学 コンピュータサイエンス学部<br>ユニークAIシステム構築道場</p>
+            </div>
+            <div class="team__content">
+                <div class="team__supervisor">
+                    <h3>指導教員</h3>
+                    <p><strong>中西崇文教授</strong></p>
+                </div>
+                <div class="team__members">
+                    <h3>参加学生</h3>
+                    <div class="members-grid">
+                        <div class="member">杉本拓海（先進情報/1年）</div>
+                        <div class="member">北條湊都（社会情報/1年）</div>
+                        <div class="member">秋山知輝（先進情報/1年）</div>
+                        <div class="member">木村翔竜（社会情報/1年）</div>
+                        <div class="member">山田祐平（人工知能/4年）</div>
+                        <div class="member">ソン・チェヨン（人工知能/4年）</div>
+                        <div class="member">西井正平（先進情報/1年）</div>
+                        <div class="member">高山隆司（先進情報/1年）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="downloads">
+        <div class="container">
+            <div class="section__header">
+                <h2>資料ダウンロード</h2>
+                <p>研究の詳細資料をご覧いただけます</p>
+            </div>
+            <div class="downloads__items">
+                <div class="download-item card">
+                    <div class="card__body">
+                        <h3>研究発表資料</h3>
+                        <p>XLLMN手法の詳細な技術説明と実験結果</p>
+                        <a href="AIG9hosuta.pdf" class="btn btn--primary" target="_blank">ダウンロード</a>
+                    </div>
+                </div>
+                <div class="download-item card">
+                    <div class="card__body">
+                        <h3>道場概要資料</h3>
+                        <p>ユニークAIシステム構築道場の全体概要</p>
+                        <a href="yunikuAIsisutemuGou-Zhu-Dao-Chang.pdf" class="btn btn--primary" target="_blank">ダウンロード</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3>XLLMN Research Project</h3>
+                    <p>東京工科大学 コンピュータサイエンス学部<br>ユニークAIシステム構築道場</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#hero">ページトップへ</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Tokyo University of Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
